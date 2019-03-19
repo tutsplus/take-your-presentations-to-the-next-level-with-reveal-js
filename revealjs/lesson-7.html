@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Take Your Presentations to the Next Level with Reveal JS - Lesson 7</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section data-background-color="#692e91">
+					This is a slide with a solid color background.
+				</section>
+				<section data-background-image="https://s3-us-west-2.amazonaws.com/s.cdpn.io/17119/luca-bravo-198061-unsplash.jpg" data-background-size="cover" data-background-opacity=".2" style="color: #fff" data-background-transition="fade" data-transition="zoom-in concave-out" data-transition-speed="slow">
+					You can also use images as slide backgrounds.
+				</section>
+				<section data-background-video="https://s3-us-west-2.amazonaws.com/s.cdpn.io/17119/Screen%20Recording%202019-03-04%20at%2014.00.34.mov" data-background-video-loop="true" data-background-video-muted="true" data-background-size="contain" data-background-opacity=".2">
+					Videos can also be used as slide backgrounds.
+				</section>
+				<section data-background-iframe="http://www.envato.com" data-background-opacity=".2" data-transition="convex">
+					iFrames can also be used to display a webpage as a slide background.
+				</section>
+				<section>
+					Fragments
+
+					<p class="fragment highlight-current-blue">They allow you to display elements incrementaly.</p>
+					<p class="fragment highlight-current-blue">You can animate fragments invidually.</p>
+					<p class="fragment highlight-current-blue">The slide doesn't change until all fragments are displayed.</p>
+				</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				// backgroundTransition: 'slide',
+
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
